@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My HTML Page</title>
+      <style>
+        div{
+          max-width: fit-content;
+          margin-left: auto;
+          margin-right: auto;  
+        }
+        body{
+            background-color:rgb(92, 92, 92);
+            color:white;
+            font-family:arial;
+        }
+        h1{
+            font-weight:lighter
+        }
+          input{
+              width:400px;
+              height:100px;
+              font-size:60px;
+              background-color:rgb(76, 76, 76);
+              color:white;
+          }
+          button{
+              background-color:orange;
+              width:100px;
+              height:100px;
+              color:white;
+          }
+          button:hover{
+              background-color:rgb(222, 144, 0);
+              cursor:pointer;
+          }
+    </style>
+      <script>
+          var a=0;
+          var b=0;
+          var c=0;
+          var d=0;
+          var e=0;
+          var PI=Math.PI
+          var E=Math.E;
+          function mode(){
+              if(d==0){
+              a=eval(num.value);
+            num.value="";
+              d=1;
+              }else{
+                  b=eval(num.value);
+                  if(c==0){
+                      num.value=eval(a+b)
+                  }else if(c==1){
+                      num.value=eval(a-b)
+                  }else if(c==2){
+                      num.value=eval(a*b)
+                  }else if(c==3){
+                      num.value=eval(a/b)
+                  }else if(c==4){
+                      num.value=eval(Math.log(a)/Math.log(b))
+                  }else if(c==5){
+                      num.value=eval(Math.pow(a,b))
+                  }
+                  d=0
+              }
+              
+          }
+      </script>
+  </head>
+  <body>
+    <div>
+        <input id='num'>
+        <div>
+            <button onclick='num.value+="1";'><h1>1</h1></button>
+            <button onclick='num.value+="2";'><h1>2</h1></button>
+            <button onclick='num.value+="3";'><h1>3</h1></button>
+            <button onclick='if(e==0){
+                             c=0;
+                             mode();
+                             }else if(e==1){
+                             num.value=eval(Math.cos(num.value));
+                             }else if(e==2){
+                             num.value=eval(Math.acos(num.value));
+                             }else if(e==3){
+                             num.value=eval(Math.floor(num.value));
+                             }else if(e==4){
+                             num.value=eval(Math.cosh(num.value));
+                             }' id='a1'><h1>+</h1></button>
+        </div>
+        <div>
+            <button onclick='num.value+="4";'><h1>4</h1></button>
+            <button onclick='num.value+="5";'><h1>5</h1></button>
+            <button onclick='num.value+="6";'><h1>6</h1></button>
+            <button onclick='if(e==0){
+                             c=1;
+                             mode();
+                             }else if(e==1){
+                             num.value=eval(Math.sin(num.value));
+                             }else if(e==2){
+                             num.value=eval(Math.asin(num.value));
+                             }else if(e==3){
+                             num.value=eval(Math.round(num.value));
+                             }else if(e==4){
+                             num.value=eval(Math.sinh(num.value));
+                             }' id='b1'><h1>-</h1></button>
+        </div>
+        <div>
+            <button onclick='num.value+="7";' id='j1'><h1>7</h1></button>
+            <button onclick='num.value+="8";' id='h1'><h1>8</h1></button>
+            <button onclick='if(e==0){
+                             num.value+="9";
+                             }else if(e<=2)
+                             {
+                             num.value+="PI";
+                             }else if(e>2){
+                             num.value+="E";
+                             }' id='i1'><h1>9</h1></button>
+            <button onclick='if(e==0){
+                             c=2;
+                             mode();
+                             }else if(e==1){
+                             num.value=eval(Math.tan(num.value));
+                             }else if(e==2){
+                             num.value=eval(Math.atan(num.value));
+                             }else if(e==3){
+                             num.value=eval(Math.ceil(num.value));
+                             }else if(e==4){
+                             num.value=eval(Math.tanh(num.value));
+                             }' id='c1'><h1>*</h1></button>
+        </div>
+        <div>
+            <button onclick='if(e==0){
+                             num.value+="0";
+                             }else if(e==1){
+                             num.value=eval(1/Math.cos(num.value));
+                             }else if(e==2){
+                             num.value=eval(Math.acos(1/num.value));
+                             }else if(e==3){
+                             c=4;
+                             mode();
+                             }else if(e==4){
+                             num.value=eval(1/Math.cosh(num.value));
+                             }' id='d1'><h1>0</h1></button>
+            <button onclick='if(e==0){
+                             num.value+=".";
+                             }else if(e==1){
+                             num.value=eval(1/Math.sin(num.value));
+                             }else if(e==2){
+                             num.value=eval(Math.asin(1/num.value));
+                             }else if(e==3){
+                             num.value=eval(1/Math.sin(num.value));
+                             }else if(e==4){
+                             num.value=eval(Math.sinh(num.value));
+                             }' id='e1'><h1>.</h1></button>
+            <button onclick='if(e==0){
+                             c=3;
+                             mode();
+                             }else if(e==1){
+                             num.value=eval(1/Math.tan(num.value));
+                             }' id='f1'><h1>/</h1></button>
+            <button onclick='mode()' id='g1'><h1>=</h1></button>
+        </div>
+        <div>
+            <button onclick='
+                             if(e!=1){
+                             a1.innerHTML="<h1>COS</h1>"; 
+                            b1.innerHTML="<h1>SIN</h1>";
+                            c1.innerHTML="<h1>TAN</h1>";
+                            d1.innerHTML="<h1>SEC</h1>"; 
+                            e1.innerHTML="<h1>CSC</h1>";
+                            f1.innerHTML="<h1>COT</h1>";
+                            i1.innerHTML="<h1>π</h1>";
+                             e=1
+                             }else{
+                             e=0;
+                             a1.innerHTML="<h1>+</h1>"; 
+                            b1.innerHTML="<h1>-</h1>";
+                            c1.innerHTML="<h1>*</h1>";
+                            d1.innerHTML="<h1>0</h1>"; 
+                            e1.innerHTML="<h1>.</h1>";
+                            f1.innerHTML="<h1>/</h1>";
+                            i1.innerHTML="<h1>9</h1>";
+                             }
+                             '><h1>TRIG</h1></button>
+            <button><h1 onclick='
+                             if(e!=2){
+                a1.innerHTML="<h1>COS<sup>-1</sup></h1>"; 
+                            b1.innerHTML="<h1>SIN<sup>-1</sup></h1>";
+                            c1.innerHTML="<h1>TAN<sup>-1</sup></h1>";
+                            d1.innerHTML="<h1>SEC<sup>-1</sup></h1>"; 
+                            e1.innerHTML="<h1>CSC<sup>-1</sup></h1>";
+                            f1.innerHTML="<h1>COT<sup>-1</sup></h1>";
+                g1.innerHTML="<h1>=</h!>";
+                            i1.innerHTML="<h1>π</h1>";
+                             e=2
+                             }else{
+                             e=0;
+                             a1.innerHTML="<h1>+</h1>"; 
+                            b1.innerHTML="<h1>-</h1>";
+                            c1.innerHTML="<h1>*</h1>";
+                            d1.innerHTML="<h1>0</h1>"; 
+                            e1.innerHTML="<h1>.</h1>";
+                g1.innerHTML="<h1>=</h!>";
+                            f1.innerHTML="<h1>/</h1>";
+                i1.innerHTML="<h1>9</h1>";
+                             }
+                             '>ARTG</h1></button>
+            <button onclick='
+                             if(e!=3){
+                             a1.innerHTML="<h1>FLR</h1>"; 
+                            b1.innerHTML="<h1>RON</h1>";
+                            c1.innerHTML="<h1>CEL</h1>";
+                             d1.innerHTML="<h1>LOG<sub>X</sub></h1>"; 
+                            e1.innerHTML="<h1>LOG</h1>";
+                            f1.innerHTML="<h1>LN</h1>";
+                            g1.innerHTML="<h1>^</h!>";
+                             i1.innerHTML="<h1>e</h1>";
+                             e=3
+                             }else{
+                             e=0;
+                             a1.innerHTML="<h1>+</h1>"; 
+                            b1.innerHTML="<h1>-</h1>";
+                            c1.innerHTML="<h1>*</h1>";
+                            d1.innerHTML="<h1>0</h1>"; 
+                            e1.innerHTML="<h1>.</h1>";
+                            f1.innerHTML="<h1>/</h1>";
+                             g1.innerHTML="<h1>=</h1>";
+                             i1.innerHTML="<h1>9</h1>";
+                             }
+                             '><h1>E/R</h1></button>
+            <button><h1 onclick='
+                             if(e!=4){
+                             a1.innerHTML="<h1>COSH</h1>"; 
+                            b1.innerHTML="<h1>SINH</h1>";
+                            c1.innerHTML="<h1>TANH</h1>";
+                            d1.innerHTML="<h1>SECH</h1>"; 
+                            e1.innerHTML="<h1>CSCH</h1>";
+                            f1.innerHTML="<h1>COTH</h1>";
+                g1.innerHTML="<h1>=</h!>";
+                            i1.innerHTML="<h1>e</h1>";
+                             e=4
+                             }else{
+                             e=0;
+                             a1.innerHTML="<h1>+</h1>"; 
+                            b1.innerHTML="<h1>-</h1>";
+                            c1.innerHTML="<h1>*</h1>";
+                            d1.innerHTML="<h1>0</h1>"; 
+                            e1.innerHTML="<h1>.</h1>";
+                            f1.innerHTML="<h1>/</h1>";
+                i1.innerHTML="<h1>9</h1>";
+                             }
+                             '>HYTG</h1></button>
+        </div>
+    </div>
+  </body>
+</html>
